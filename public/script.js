@@ -7,7 +7,7 @@ import ExampleComponent from "./components/ExampleComponent";
 
 
 
-ReactDOM.render(<ControlledInput type="module" />, document.getElementById("input"));
+ReactDOM.render(<ControlledInput  />, document.getElementById("input"));
 const rootElement = document.getElementById("script");
 ReactDOM.render(<ExampleComponent />, rootElement);
 // class App extends React.Component {
