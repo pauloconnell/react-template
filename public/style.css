@@ -6,8 +6,12 @@
 
 body {
   font-family: sans-serif;
+  color: lightblue;
   margin: 2em 1em;
   line-height: 1.5em;
+  background: lightblue url("https://res.cloudinary.com/pollie/image/upload/v1611867424/HouseBoat_twiqzh.jpg") no-repeat ; 
+  background-size: 85%;
+
 }
 
 h1 {
