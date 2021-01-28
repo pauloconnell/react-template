@@ -19,21 +19,28 @@
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
 
-    <!-- import the webpage's client-side javascript file 
+    <!-- import the webpage's client-side javascript file -->
     <script src="/script.js" defer></script>
--->
+
   </head>
   <body>
     <header>
       <h1>A Dream of the Future</h1>
     </header>
+    <div id="script">
+    </div>
     <div id="root">Load here...</div>
     <main>
       <h2>Good resources for React:</h2>
       Class VS Functional component:<br>
       <a href="https://www.twilio.com/blog/react-choose-functional-components" target="_blank" rel="noopener noreferrer">https://www.twilio.com/blog/react-choose-functional-components</a><br>
       <p>More to come</p>
+      
+      <div id="input">
+      </div>
       <span id="like_button_container">Like Button goes here</span>
+      <div id="exampleComponent"> Example here
+      </div>
     </main>
 
     <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
@@ -46,23 +53,19 @@
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script
-      src="https://unpkg.com/react@17/umd/react.development.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
-      crossorigin
-    ></script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load our React component. 
 <script type="text/babel" src="../public/components/WelcomeBack.js"></script>
--->
-    <script type="text/babel" src="/TempComp.js"></script>
 
+    <script type="text/babel" src="../components/ExampleComponent.js"></script>
+    <script type="text/babel" src="../components/TempComp.js"></script>
+-->
+
+<!-- only public folder exposed in server, so NewComponent is not able to be found:
+<script type="text/babel" src="./NewComponent.js"></script>
+    -->
     
-    <script type="text/babel">
-      ReactDOM.render(<TempComp />, document.getElementById("root"));
-    </script>
   </body>
 </html>

@@ -11,9 +11,14 @@ export default class TempComp extends React.Component {
   render() {
     return(
     <div>
-      <h2> Welcome Back</h2>
+      <h2> Welcome Back{this.name}</h2>
       <button> Download?</button>
     </div>
       );
   }
 }
+const domContainer = document.querySelector('#root');
+ReactDOM.render(<TempComp />, domContainer);
+
+
+//ReactDOM.render(<TempComp />, document.getElementById("root"));

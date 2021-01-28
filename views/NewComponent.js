@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "reactDOM";
 
-const FunctionalComp = (props)=>{
+const NewComponent = (props)=>{
   
   
   
@@ -13,6 +13,4 @@ const FunctionalComp = (props)=>{
   
   
 };
-
-export default FunctionalComp;
-ReactDOM.render(<FunctionalComp />, document.getElementById("like_button_container"));
+ReactDOM.render(<NewComponent />, document.getElementById("like_button_container"));

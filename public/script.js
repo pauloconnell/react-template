@@ -1,8 +1,15 @@
 // client-side js, loaded by index.html
 // run by the browser each time the page is loaded
-import React from 'react';
-import ReactDOM from 'reactDOM'
+import React from "react";
+import ReactDOM from "reactDOM";
+import ControlledInput from "./components/ControlledInput";
+import ExampleComponent from "./components/ExampleComponent";
 
+
+
+ReactDOM.render(<ControlledInput type="module" />, document.getElementById("input"));
+const rootElement = document.getElementById("script");
+ReactDOM.render(<ExampleComponent />, rootElement);
 // class App extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -28,14 +35,14 @@ import ReactDOM from 'reactDOM'
 //       soundName: name
 //     });
 //     const audio = document.getElementById(e.key.toUpperCase());
-//     audio ? audio.play():''; 
+//     audio ? audio.play():'';
 //     }
-//   } 
+//   }
 //   handleChange = (e) => {
 //     const volume = e.target.value/100;
 //     document.querySelectorAll('audio').forEach(el => el.volume = volume);
 //   }
-  
+
 //   componentDidMount() {
 //     document.addEventListener('keydown', this.handleKeyPress);
 //   }
@@ -49,7 +56,7 @@ import ReactDOM from 'reactDOM'
 //         {item.key}
 //         <audio className="clip" ref={item.key} id={item.key} src={item.src}></audio>
 //       </div>);
-                                         
+
 //     return (
 //       <div id="drum-machine">
 //         <h1>Drum Machine 🥁</h1>
@@ -69,7 +76,3 @@ import ReactDOM from 'reactDOM'
 //     );
 //   }
 // };
-
-const element = <h1>Hello, here comes the app</h1>;
-
-

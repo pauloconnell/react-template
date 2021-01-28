@@ -16,14 +16,11 @@ const dreams = [
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
+//app.use(express.static("views/TempComp"));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/views/index.html");
-});
-
-app.get(process.cwd()+"/TempComp", (req,res)=>{
-  res.sendFile(__dirname + "/views/TempComp.js");
 });
 
 // send the default array of dreams to the webpage
