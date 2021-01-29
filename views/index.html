@@ -3,34 +3,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A cool thing made with Glitch">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
 
     <title>Welcome to Glitch!</title>
 
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css" />
 
-    <!-- import the webpage's client-side javascript file -->
+    <!-- import the webpage's client-side javascript file -No, use React instead below
     <script src="/script.js" defer></script>
+    -->
+
   </head>
   <body>
     <header>
       <h1>A Dream of the Future</h1>
     </header>
-    <div id="root">
-    replace me with app
+    <div id="script">
     </div>
+    <div id="root">Load here...</div>
     <main>
-      <h2>Oh hi,</h2>
-
-      <p>Tell me your hopes and dreams:</p>
-<div id="app" />
-     
-     
+      <h2>Good resources for React:</h2>
+      Class VS Functional component:<br>
+      <a href="https://www.twilio.com/blog/react-choose-functional-components" target="_blank" rel="noopener noreferrer">https://www.twilio.com/blog/react-choose-functional-components</a><br>
+      <p id="game">More to come</p>
+      Any Requests?<br>
+      <div id="input">
+      </div><br>
+      <span id="like_button_container">Like Button goes here</span>
+      <div id="exampleComponent"> Example here
+      </div>
     </main>
 
     <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
@@ -38,6 +49,30 @@
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:2em;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js" defer></script>
+
+    <script  src="https://button.glitch.me/button.js" defer></script>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script  src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+    <script  type="text/babel" src="/components/GameOfChance.js"></script>
+    <script type="text/babel" >
+      ReactDOM.render(<GameOfChance />, document.getElementById("game"));
+    </script>
+    <!-- Load our React component. 
+<script type="text/babel" src="/components/WelcomeBack.js"></script>
+
+    <script type="text/babel" src="/components/ExampleComponent.js"></script>
+
+    <script src="/components/ControlledInput.js"></script>
+-->
+  
+<!-- only public folder exposed in server, so NewComponent is not able to be found:
+<script type="text/babel" src="./NewComponent.js"></script>
+    -->
+    
   </body>
 </html>
