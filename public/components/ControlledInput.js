@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 export default class ControlledInput extends React.Component {
   constructor(props) {
@@ -10,18 +11,19 @@ export default class ControlledInput extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+    // Change in inputBox sets value of input
   handleChange(event) {
     this.setState({
       input: event.target.value
     });
   }
   handleSubmit(event) {
-    // Change code below this line
+    // When submit is clicked, set submit value
     event.preventDefault();
     this.setState({
       submit: this.state.input
     })
-    // Change code above this line
+ 
   }
   render() {
     return (
@@ -36,6 +38,8 @@ export default class ControlledInput extends React.Component {
         <h1>{this.state.submit}</h1>
         {/* Change code above this line */}
       </div>
+      
     );
   }
 }
+ReactDOM.render(<ControlledInput  />, document.getElementById("input"));
