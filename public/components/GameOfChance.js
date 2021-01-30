@@ -1,4 +1,3 @@
-
 "use strict";
 import React from "react";
 //import ReactDOM from "react-dom";
@@ -12,7 +11,7 @@ class Results extends React.Component {
   }
 }
 
-class GameOfChance extends React.Component {
+export default class GameOfChance extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
