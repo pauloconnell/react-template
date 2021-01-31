@@ -1,6 +1,8 @@
 "use strict";
 import React from "react";
-//import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
+
+const e = React.createElement;
 
 class Results extends React.Component {
   constructor(props) {
@@ -37,3 +39,6 @@ export default class GameOfChance extends React.Component {
     );
   }
 }
+
+const domContainer = document.querySelector('#game');
+ReactDOM.render(e(GameOfChance), domContainer);

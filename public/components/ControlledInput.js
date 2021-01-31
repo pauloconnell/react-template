@@ -26,11 +26,18 @@ export default class ControlledInput extends React.Component {
  
   }
   render() {
+    let inputStyle = {
+      border: '1px solid black'
+    };
+    // if input is greater than 15, change color of inputBox border to RED
+    if(this.state.input.length>15){
+       inputStyle.border='3px solid red';
+    }
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           {/* Change code below this line */}
-        <input value={this.state.input} onChange={this.handleChange}></input>
+        <input style={inputStyle} value={this.state.input} onChange={this.handleChange}></input>
           {/* Change code above this line */}
           <button type='submit'>Submit!</button>
         </form>
